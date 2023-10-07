@@ -6,4 +6,4 @@ def uppercase(str):
             strout += chr(ord(ch) - 32)
         else:
             strout += ch
-    print(strout)
+    print('{}'.format(strout))
