@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
+    if not matrix[0]:
+        print()
     lenx = len(matrix)
     for x in range(lenx):
         leny = len(matrix[x])
