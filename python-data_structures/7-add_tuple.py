@@ -10,5 +10,5 @@ def add_tuple(tuple_a=(), tuple_b=()):
             tup_b[i] = tuple_b[i]
     for i in range(2):
         tup_a[i] += tup_b[i]
-    final_tuple = tup_a[0],tup_a[1]
+    final_tuple = tup_a[0], tup_a[1]
     return final_tuple
