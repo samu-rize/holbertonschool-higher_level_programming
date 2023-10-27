@@ -5,6 +5,7 @@ def best_score(a_dictionary):
         return None
 
     best_val = None
+    best_key = ''
 
     for key, val in a_dictionary.items():
         if best_val is None or val > best_val:
