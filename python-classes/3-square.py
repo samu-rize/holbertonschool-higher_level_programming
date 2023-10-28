@@ -4,7 +4,15 @@
 
 
 class Square:
+    """
+    This is a simple Python class to represent a square.
 
+    Attributes:
+        __size (int): The size of the square.
+
+    Methods:
+        __init__(self, size=0): Constructor method to initialize the square with a given size.
+    """
     def __init__(self, size=0):
         """
         Initializes a new Square instance with the specified size.
