@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Square module"""
+"""Write a class Square that defines a square by size
+    and calculate current square area"""
 
 
 class Square:
@@ -31,4 +32,4 @@ class Square:
         Returns:
             int: The area of the square.
         """
-        return self.__size * self.__size
+        return self.__size ** 2
