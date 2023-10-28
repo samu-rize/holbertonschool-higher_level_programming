@@ -11,7 +11,8 @@ class Square:
         __size (int): The size of the square.
 
     Methods:
-        __init__(self, size=0): Constructor method to initialize the square with a given size.
+        __init__(self, size=0): Constructo
+        method to initialize the square with a given size.
     """
     def __init__(self, size=0):
         """
