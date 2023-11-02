@@ -9,10 +9,6 @@ class Square:
     def __init__(self, size=0, position=(0, 0)):
         """Initializes a new Square instance with the specified size and
         position."""
-        if not isinstance(size, int):
-            raise TypeError('size must be an integer')
-        if size < 0:
-            raise ValueError('size must be >= 0')
         self.__size = size
         self.__position = position
 
@@ -43,8 +39,8 @@ class Square:
     def position(self, value):
         """Sets the position of the square."""
         if (not isinstance(value, tuple) or
-            (len(value) is not 2) or
-            not all(isinstance(num, int) for num in value) or
+                (len(value) is not 2) or
+                not all(isinstance(num, int) for num in value) or
                 all(num < 0 for num in value)):
             raise TypeError('position must be a tuple of 2 positive integers')
         self.__position = value
@@ -58,5 +54,5 @@ class Square:
             for _ in range(self.__size):
                 print(
                     '{}{}'.format(
-                        ' ' * self.__position[0],
+                        '_' * self.__position[0],
                         '#' * self.__size))
