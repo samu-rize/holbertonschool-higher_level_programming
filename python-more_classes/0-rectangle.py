@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-#Rectangle module
+"""Rectangle module"""
 
 
 class Rectangle:
-    #Simple Python class to represent a Rectangle.
+    """Simple Python class to represent a Rectangle."""
     pass
