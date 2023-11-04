@@ -4,15 +4,11 @@
 
 class Rectangle:
     """Simple Python class to represent a Rectangle."""
-    number_of_instances = 0 #Created public class attribute number_of_instances and initialized to 0
-
 
     def __init__(self, width=0, height=0):
         """Initialize a Rectangle with optional width and height."""
         self.width = width
         self.height = height
-        Rectangle.number_of_instances += 1 # Incremented during each new instance instantiation
-
 
     @property
     def width(self):
@@ -66,4 +62,3 @@ class Rectangle:
         """Destructor method to perform cleanup when the object is deleted."""
         del self
         print("Bye rectangle...")
-        Rectangle.number_of_instances -= 1 #Decremented during each instance deletion
