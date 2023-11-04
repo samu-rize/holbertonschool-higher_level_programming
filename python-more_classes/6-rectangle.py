@@ -7,7 +7,7 @@ class Rectangle:
 
     # Created public class attribute number_of_instances
     # Initialized to 0
-    number_of_instances = 0  
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         """Initialize a Rectangle with optional width and height."""
@@ -16,7 +16,6 @@ class Rectangle:
         self.height = height
         # Incremented during each new instance instantiation
         Rectangle.number_of_instances += 1
-
 
     @property
     def width(self):
