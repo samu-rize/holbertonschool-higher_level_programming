@@ -6,4 +6,5 @@ class MyList(list):
     """MyList is a subclass of the built-in list class."""
     def print_sorted(self):
         """This method prints the sorted elements of the list."""
-        print(sorted(self))
+        copy = sorted(self)
+        print(copy)
