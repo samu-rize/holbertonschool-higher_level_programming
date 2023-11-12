@@ -4,6 +4,7 @@
 
 class BaseGeometry:
     """BaseGeometry class"""
+
     def __init__(self):
         """Empty initializer"""
         pass
