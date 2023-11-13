@@ -5,9 +5,9 @@
 def add_integer(a, b=98):
     """function add 2 integers"""
     if type(a) not in (int, float):
-        raise TypeError("{} must be an integer".format(a))
+        raise TypeError("a must be an integer")
     elif type(b) not in (int, float):
-        raise TypeError("{} must be an integer".format(b))
+        raise TypeError("b must be an integer")
     return int(a) + int(b)
 
 
