@@ -1,0 +1,41 @@
+>>> add_integer = __import__('0-add_integer').add_integer
+
+>>> print(add_integer(1, 2))
+3
+>>> print(add_integer(100, -2))
+98
+>>> print(add_integer(2))
+100
+>>> print(add_integer(100.3, -2))
+98
+>>> print(add_integer(-2))
+96
+>>> print(add_integer(4, "School"))
+Traceback (most recent call last):
+...
+TypeError: School must be an integer
+>>> print(add_integer("School"))
+Traceback (most recent call last):
+...
+TypeError: School must be an integer
+>>> print(add_integer(None))
+Traceback (most recent call last):
+...
+TypeError: None must be an integer
+>>> print(add_integer(9e999, 9e999))
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
+>>> print(add_integer(9e999, -9e999))
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
+>>> print(add_integer(9, True))
+10
+>>> print(add_integer(9, False))
+9
+>>> print(add_integer(False))
+98
+>>> print(add_integer(True))
+99
+>>>
