@@ -1,75 +1,80 @@
->>> add_integer = __import__('0-add_integer').add_integer
+The ``0-add_integer`` module
+======================
 
->>> print(add_integer(2))
-100
->>> print(add_integer(1, 2))
-3
->>> print(add_integer(-2))
-96
->>> print(add_integer(-2, -1))
--3
->>> print(add_integer(100, -2))
-98
->>> print(add_integer(2.0))
-100
->>> print(add_integer(2.0, 6.0))
-8
->>> print(add_integer(-2.0))
-96
->>> print(add_integer(2.0, -6.0))
--4
->>> print(add_integer(-2.0, -6.0))
--8
->>> print(add_integer(2, 6.0))
-8
->>> print(add_integer(-2, 6.0))
-4
->>> print(add_integer(2, -6.0))
--4
->>> print(add_integer(-2, -6.0))
--8
->>> print(add_integer("School"))
-Traceback (most recent call last):
-...
-TypeError: School must be an integer
->>> print(add_integer(4, "School"))
-Traceback (most recent call last):
-...
-TypeError: School must be an integer
->>> add_integer(["idx1", "idx2"])
-Traceback (most recent call last):
-...
-TypeError: a must be an integer
->>> add_integer({"key" : "val"})
-Traceback (most recent call last):
-...
-TypeError: a must be an integer
->>> print(add_integer(None))
-Traceback (most recent call last):
-...
-TypeError: None must be an integer
->>> add_integer(float('inf'), -float('inf'))
-Traceback (most recent call last):
-...
-OverflowError: cannot convert float infinity to integer
->>> add_integer(float('nan'))
-Traceback (most recent call last):
-...
-ValueError: cannot convert float NaN to integer
->>> print(add_integer(9e999, 9e999))
-Traceback (most recent call last):
-...
-OverflowError: cannot convert float infinity to integer
->>> print(add_integer(9e999, -9e999))
-Traceback (most recent call last):
-...
-OverflowError: cannot convert float infinity to integer
->>> print(add_integer(9, True))
-10
->>> print(add_integer(9, False))
-9
->>> print(add_integer(False))
-98
->>> print(add_integer(True))
-99
->>>
+import:
+=======
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+test one integer:
+    >>> add_integer(4)
+    102
+
+test two ineger:
+    >>> add_integer(5, 42)
+    47
+
+test one negativ integer:
+    >>> add_integer(-4)
+    94
+
+test two negativ ineger:
+    >>> add_integer(-5, -42)
+    -47
+
+test one float:
+    >>> add_integer(4.5)
+    102
+
+test one negativ float:
+    >>> add_integer(-8.587)
+    90
+
+test two float:
+    >>> add_integer(4.5, 4.5)
+    8
+
+test two negativ float:
+    >>> add_integer(-8.587, -52.558)
+    -60
+
+test string:
+    >>> add_integer("maouia")
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+test list:
+    >>> add_integer(["maouia", "bend"])
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+test dict:
+    >>> add_integer({"maouia" : "bend"})
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+test none:
+    >>> add_integer(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+test with infinity:
+    >>> add_integer(float('inf'), -float('inf'))
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
+
+test with not legal number:
+    >>> add_integer(float('nan'))
+    Traceback (most recent call last):
+    ...
+    ValueError: cannot convert float NaN to integer
+
+test with big:
+    >>> add_integer(1e555)
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
