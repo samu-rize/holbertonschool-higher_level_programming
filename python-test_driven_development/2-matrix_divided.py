@@ -6,11 +6,13 @@ def matrix_divided(matrix, div):
     """functions divides all elements of a matrix"""
     new_matrix = []
 
+    # Check if the matrix is empty
     if not matrix:
         return new_matrix
 
     row_size = len(matrix[0])
 
+    # Check if div is a number and not zero
     if not (isinstance(div, int) or isinstance(div, float)):
         raise TypeError ("div must be a number")
     if div == 0:
@@ -18,6 +20,7 @@ def matrix_divided(matrix, div):
 
     for i in range(len(matrix)):
 
+        # Check if each row has the same size
         if row_size != len(matrix[i]):
             raise TypeError ("Each row of the matrix must have the same size")
 
