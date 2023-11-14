@@ -14,12 +14,14 @@ def matrix_divided(matrix, div):
     for i in range(len(matrix)):
         new_row = []
 
-        if not (isinstance(i, int) or isinstance(i, float)):
-            raise TypeError ("matrix must be a matrix (list of lists) of integers/floats")
         if row_size != len(matrix[i]):
             raise TypeError ("Each row of the matrix must have the same size")
 
         for j in range(len(matrix[i])):
+
+            if not (isinstance(matrix[i][j], int) or isinstance(matrix[i][j], float)):
+                raise TypeError ("matrix must be a matrix (list of lists) of integers/floats")
+
             new_row.append(round(matrix[i][j] / div, 2))
         new_matrix.append(new_row)
 
