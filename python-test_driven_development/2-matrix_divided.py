@@ -1,36 +1,38 @@
 #!/usr/bin/python3
-"""module contain a functions to divides all elements of a matrix"""
+"""
+Matrix division function
+"""
 
 
 def matrix_divided(matrix, div):
-    """functions divides all elements of a matrix"""
-    new_matrix = []
-
-    # Check if the matrix is empty
-    if not matrix:
-        return new_matrix
-
-    row_size = len(matrix[0])
-
-    # Check if div is a number and not zero
-    if not (isinstance(div, int) or isinstance(div, float)):
-        raise TypeError ("div must be a number")
+    """
+    Divides all elements of a matrix by    1- Each row of the matrix must be of the same size
+    
+    Parameters:
+    - matrix: list of lists of integers or floats
+    - div: number (integer or float), cannot be 0
+    """
+    if type(div) not in (int, float):
+        raise ValueError("div must be a number")
     if div == 0:
-        raise ZeroDivisionError ("division by zero")
+        raise ZeroDivisionError("division by zero")
 
-    for i in range(len(matrix)):
+    if not all(
+        isinstance(row, list) and
+            all(isinstance(val, (int, float)) for val in row)
+            for row in matrix):
+        raise TypeError(
+            "matrix must be a matrix (list of lists) of integers/floats"
+            )
 
-        # Check if each row has the same size
-        if row_size != len(matrix[i]):
-            raise TypeError ("Each row of the matrix must have the same size")
+    if not all(len(row) == len(matrix[0]) for row in matrix):
+        raise TypeError("Each row of the matrix must have the same size")
 
-        new_row = []
-        for j in range(len(matrix[i])):
-
-            if not (isinstance(matrix[i][j], int) or isinstance(matrix[i][j], float)):
-                raise TypeError ("matrix must be a matrix (list of lists) of integers/floats")
-
-            new_row.append(round(matrix[i][j] / div, 2))
-        new_matrix.append(new_row)
+    new_matrix = [[round(val / div, 2) for val in row] for row in matrix]
 
     return new_matrix
+
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testfile("tests/2-matrix_divided.txt")
