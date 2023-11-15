@@ -1,0 +1,34 @@
+>>> matrix =  __import__('2-matrix_divided').matrix_divided
+>>> matrix([[1, 2, 3], [4, 5, 6]], 3)
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+>>> matrix([[1, 2, 3], [4, 5, 6]], 3.5)
+[[0.29, 0.57, 0.86], [1.14, 1.43, 1.71]]
+>>> matrix([[1.5, 2.5, 3], [4, 5, 6]], 3)
+[[0.5, 0.83, 1.0], [1.33, 1.67, 2.0]]
+>>> matrix([[1, 2, 3], [4, 5, 6]], -3)
+[[-0.33, -0.67, -1.0], [-1.33, -1.67, -2.0]]
+>>> matrix([[-1, -2, 3], [4, 5, 6]], 3)
+[[-0.33, -0.67, 1.0], [1.33, 1.67, 2.0]]
+>>> matrix([[-1, -2, 3], [4, 5, 6]], -3)
+[[0.33, 0.67, -1.0], [-1.33, -1.67, -2.0]]
+>>> matrix([[True, False, 3], [4, 5, 6]], 3)
+[[0.33, 0.0, 1.0], [1.33, 1.67, 2.0]]
+>>> matrix([], 3)
+[]
+>>> matrix([[True, False], [4, 5, 6]], 3)
+Traceback (most recent call last):
+...
+TypeError: Each row of the matrix must have the same size
+>>> matrix([[True, "F"], [4, 5, 6]], 3)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+>>> matrix([[True, False], [4, 5, 6]], 0)
+Traceback (most recent call last):
+...
+ZeroDivisionError: division by zero
+>>> matrix([[True, False], [4, 5, 6]], "l")
+Traceback (most recent call last):
+...
+ValueError: div must be a number
+>>> 
