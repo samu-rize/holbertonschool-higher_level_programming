@@ -1,38 +1,50 @@
->>> text_indentation = __import__('5-text_indentation').text_indentation
->>> text_indentation("test, testing testin?   test test test.   test: test")
-test, testing testin?
+>>> test = __import__('5-text_indentation').text_indentation
+>>> test("    start with spaces.")
+start with spaces.
 
-test test test.
+>>> test("       ")
+>>> test("end with spaces.       ")
+end with spaces.
 
-test:
+>>> test("    spaces.   every:    where?    ")
+spaces.
 
-test
->>> text_indentation ("")
->>> text_indentation(2)
+every:
+
+where?
+
+>>> test("no ending period")
+no ending period>>> test("is that bad?")
+is that bad?
+
+>>> test("new line after period.\nprinted.")
+new line after period.
+
+
+printed.
+
+>>> test("\n\nnewlines at starting:")
+
+
+newlines at starting:
+
+>>> test()
+Traceback (most recent call last):
+...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+>>> test(5)
 Traceback (most recent call last):
 ...
 TypeError: text must be a string
->>> text_indentation(True)
+>>> test(None)
 Traceback (most recent call last):
 ...
 TypeError: text must be a string
->>> text_indentation(3.5)
+>>> test((1,))
 Traceback (most recent call last):
 ...
 TypeError: text must be a string
->>> text_indentation((3.5,))
-Traceback (most recent call last):
-...
-TypeError: text must be a string
->>> text_indentation((3,))
-Traceback (most recent call last):
-...
-TypeError: text must be a string
->>> text_indentation([3, 2])
-Traceback (most recent call last):
-...
-TypeError: text must be a string
->>> text_indentation({3: 2})
+>>> test({"one": 1})
 Traceback (most recent call last):
 ...
 TypeError: text must be a string
