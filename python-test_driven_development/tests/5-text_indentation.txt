@@ -1,33 +1,33 @@
 >>> test = __import__('5-text_indentation').text_indentation
 >>> test("    start with spaces.")
 start with spaces.
-
+<BLANKLINE>
 >>> test("       ")
 >>> test("end with spaces.       ")
 end with spaces.
-
+<BLANKLINE>
 >>> test("    spaces.   every:    where?    ")
 spaces.
-
+<BLANKLINE>
 every:
-
+<BLANKLINE>
 where?
-
+<BLANKLINE>
 >>> test("no ending period")
 no ending period>>> test("is that bad?")
 is that bad?
-
+<BLANKLINE>
 >>> test("new line after period.\nprinted.")
 new line after period.
-
-
+<BLANKLINE>
+<BLANKLINE>
 printed.
-
+<BLANKLINE>
 >>> test("\n\nnewlines at starting:")
-
-
+<BLANKLINE>
+<BLANKLINE>
 newlines at starting:
-
+<BLANKLINE>
 >>> test()
 Traceback (most recent call last):
 ...
@@ -50,5 +50,5 @@ Traceback (most recent call last):
 TypeError: text must be a string
 >>> test("Hello?")
 Hello?
-
+<BLANKLINE>
 >>> 
