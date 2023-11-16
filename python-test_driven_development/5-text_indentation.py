@@ -3,26 +3,24 @@
 
 
 def text_indentation(text):
-    """a function that prints a text with 2 new lines after each of these characters: ., ? and :"""
+    """a function that prints a text with 2 new lines after each of these characters: ".", "?", ":" """
 
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
     txt_len = len(text)
-    out = ""
     idx = 0
 
     while idx < txt_len and text[idx] == " ":
         idx += 1
 
     while idx < txt_len:
-        out += text[idx]
+        print(text[idx], end="")
         if text[idx] == "\n" or text[idx] in ".?:":
             if text[idx] in ".?:":
-                out += "\n"
+                print("\n")
             idx += 1
             while idx < txt_len and text[idx] == " ":
                 idx += 1
             continue
         idx += 1
-    print(out)    
