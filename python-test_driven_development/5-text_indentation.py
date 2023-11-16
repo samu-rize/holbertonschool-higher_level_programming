@@ -15,24 +15,17 @@ def text_indentation(text):
     while idx < txt_len and text[idx] == " ":
         idx += 1
 
-    # while idx < txt_len:
-    #     if text[idx] in [".", "?", ":"]:
-    #         out += text[idx] + "\n" * 2
-    #         idx += 1
-    #         while idx < txt_len and text[idx] == " ":
-    #             idx += 1
-    #     else:
-    #         out += text[idx]
-    #         idx += 1
-    # print(out)    
     while idx < txt_len:
         out += text[idx]
-        if out[-1] in ".?:":
+        if text[idx] == "\n" or text[idx] in ".?:":
+            if text[idx] in ".?:":
+                out += "\n" * 2
+            idx += 1
             while idx < txt_len and text[idx] == " ":
                 idx += 1
-            out += "\n" * 2
+            continue
         idx += 1
-    print(out)
+    print(out)    
 
 
 if __name__ == "__main__":
