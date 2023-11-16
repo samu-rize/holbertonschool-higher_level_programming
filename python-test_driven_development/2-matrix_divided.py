@@ -6,7 +6,8 @@ Matrix division function
 
 def matrix_divided(matrix, div):
     """
-    Divides all elements of a matrix by    1- Each row of the matrix must be of the same size
+    Divides all elements of a matrix by    1- Each row of the matrix must be
+    of the same size
 
     Parameters:
     - matrix: list of lists of integers or floats
