@@ -2,12 +2,12 @@
 """Script to add command line arguments to a JSON file."""
 import sys
 
-# Importing functions from external modules
-save_to_json_file = __import__('5-save_to_json_file.py').save_to_json_file
-load_from_json_file = __import__(
-    '6-load_from_json_file.py').load_from_json_file
-
 if __name__ == "__main__":
+
+    # Importing functions from external modules
+    save_to_json_file = __import__('5-save_to_json_file.py').save_to_json_file
+    load_from_json_file = __import__(
+        '6-load_from_json_file.py').load_from_json_file
 
     # Load existing JSON file or initialize an empty list
     try:
