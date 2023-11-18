@@ -12,7 +12,7 @@ if __name__ == "__main__":
     # Load existing JSON file or initialize an empty list
     try:
         the_list = load_from_json_file('add_item.json')
-    except BaseException:
+    except FileNotFoundError:
         the_list = []
 
     # Add command line arguments to the list
