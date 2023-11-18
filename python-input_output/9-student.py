@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 """Defines a simple Student class and its to_json method."""
 
-import json
-
 
 class Student:
     """Represents a student with first name, last name, and age."""
