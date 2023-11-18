@@ -3,5 +3,6 @@
 
 
 def class_to_json(obj):
-    """Converts the specified class instance to a JSON-serializable dictionary."""
+    """Converts the specified class instance to a JSON-serializable
+    dictionary."""
     return obj.__dict__
