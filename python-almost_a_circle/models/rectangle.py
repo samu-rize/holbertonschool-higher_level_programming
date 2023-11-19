@@ -77,6 +77,27 @@ class Rectangle(Base):
             print(" " * self.x + "#" * self.width)
 
     def __str__(self):
+        """Overrides the __str__ method"""
         return "[{}] ({}) {}/{} - {}/{}".format(type(self).__name__,
                                                 self.id, self.x, self.y,
                                                 self.width, self.height)
+
+    def __update(self, id=None, width=None, height=None, x=None, y=None):
+        """Updates attributes based on input parameters"""
+        if id != None:
+            self.id = id
+        if width != None:
+            self.width= width
+        if height != None:
+            self.height = height
+        if x != None:
+            self.x = x
+        if y != None:
+            self.y = y
+
+    def update(self, *args, **kwargs):
+        """assigns an argument to each attribute"""
+        if kwargs:
+            self.__update(*args, **kwargs)
+        else:
+            self.__update(*args)
