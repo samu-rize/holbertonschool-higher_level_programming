@@ -97,7 +97,7 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         """assigns an argument to each attribute"""
-        if kwargs:
-            self.__update(*args, **kwargs)
-        else:
+        if not kwargs:
             self.__update(*args)
+        else:
+            self.__update(*args, **kwargs)
