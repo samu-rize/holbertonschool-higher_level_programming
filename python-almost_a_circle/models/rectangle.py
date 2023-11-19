@@ -84,15 +84,15 @@ class Rectangle(Base):
 
     def __update(self, id=None, width=None, height=None, x=None, y=None):
         """Updates attributes based on input parameters"""
-        if id != None:
+        if id is not None:
             self.id = id
-        if width != None:
-            self.width= width
-        if height != None:
+        if width is not None:
+            self.width = width
+        if height is not None:
             self.height = height
-        if x != None:
+        if x is not None:
             self.x = x
-        if y != None:
+        if y is not None:
             self.y = y
 
     def update(self, *args, **kwargs):
