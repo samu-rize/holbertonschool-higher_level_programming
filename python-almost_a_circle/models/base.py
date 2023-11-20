@@ -21,8 +21,7 @@ class Base:
         """Dictionary to JSON string"""
         if list_dictionaries is None or not list_dictionaries:
             return "[]"
-        else:
-            return dumps(list_dictionaries)
+        return dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
@@ -36,6 +35,5 @@ class Base:
     def from_json_string(json_string):
         """JSON string to dictionary"""
         if json_string is None or not json_string:
-            return "[]"
-        else:
-            return loads(json_string)
+            return []
+        return loads(json_string)
