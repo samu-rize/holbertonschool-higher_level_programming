@@ -2,6 +2,8 @@
 """Defines a simple Base class for managing unique IDs."""
 
 from json import dumps
+
+
 class Base:
     """Represents a base class with a unique ID generator."""
     __nb_objects = 0
